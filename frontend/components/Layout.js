@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useAppContext } from "@/context/AppContext";
 import Cookie from "js-cookie";
+import Logo from "@/components/Logo";
 const Cart = dynamic(() => import("@/components/Cart"), { ssr: false });
 
 import Head from "next/head";
@@ -18,15 +19,15 @@ function Navigation() {
   }
 
   return (
-    <header className="bg-green-800">
+    <header className="bg-red-800">
       <nav className="flex justify-between p-6 px-4">
-        <div className="flex justify-between items-center w-full mx-16">
+        <div className="sm:flex sm:justify-between sm:items-center w-full sm:mx-16">
           <div className="xl:w-1/3">
             <Link
               className="block text-2xl max-w-max text-white font-medium"
               href="/"
             >
-              Food Order App
+              <Logo />
             </Link>
           </div>
 
@@ -46,7 +47,7 @@ function Navigation() {
                       {user.username}
                     </span>
                     <button
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                      className="inline-block py-2 px-4 text-sm leading-5 text-red-50 bg-red-500 hover:bg-red-600 font-medium focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md"
                       onClick={handleLogout}
                     >
                       Log Out
@@ -61,7 +62,7 @@ function Navigation() {
                       Log In
                     </Link>
                     <Link
-                      className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-600 hover:bg-green-700 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                      className="inline-block py-2 px-4 text-sm leading-5 text-red-50 bg-red-600 hover:bg-red-700 font-medium focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md"
                       href="/register"
                     >
                       Sign Up
