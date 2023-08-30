@@ -48,7 +48,7 @@ function DishCard({ data }) {
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
       <div className="h-full bg-gray-100 rounded-2xl">
         <Image
-          className="w-full rounded-2xl"
+          className="w-full rounded-t-2xl"
           height={300}
           width={300}
           src={`${
@@ -95,10 +95,10 @@ export default function Restaurant() {
 
     return (
       <div className="py-6">
-        <h1 className="text-4xl font-bold text-green-600">
+        <h1 className="text-4xl font-bold text-red-600">
           {restaurant.data.attributes.name}
         </h1>
-        <div className="py-16 px-8 bg-white rounded-3xl">
+        <div className="py-16 px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap -m-4 mb-6">
               {restaurant.data.attributes.dishes.data.map((res) => {
