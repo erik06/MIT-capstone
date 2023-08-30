@@ -37,6 +37,7 @@ export default function RegisterRoute() {
       setUser(data.register.user);
       router.push("/");
       Cookie.set("token", data.register.jwt);
+      alert("You have successfully logged in and created an account!");
     }
   };
 

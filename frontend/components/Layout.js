@@ -16,6 +16,7 @@ function Navigation() {
     setUser(null);
     Cookie.remove("token");
     router.push("/");
+    alert("You have successfully logged out!");
   }
 
   return (

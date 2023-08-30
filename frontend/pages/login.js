@@ -35,6 +35,7 @@ export default function LoginRoute() {
       setUser(data.login.user);
       Cookie.set("token", data.login.jwt);
       router.push("/");
+      alert("You have successfully logged in!");
     }
   };
 
