@@ -33,7 +33,7 @@ function RestaurantCard({ data }) {
           height={300}
           width={300}
           src={`${
-            process.env.STRAPI_URL || "https://strapi-75qo.onrender.com"
+            process.env.STRAPI_URL || ""
           }${data.attributes.image.data[0].attributes.url}`}
           alt=""
         />

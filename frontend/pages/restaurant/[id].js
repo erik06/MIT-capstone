@@ -52,9 +52,9 @@ function DishCard({ data }) {
           className="w-full rounded-t-2xl"
           height={300}
           width={300}
-          src={`${
-            process.env.STRAPI_URL || "https://strapi-75qo.onrender.com"
-          }${data.attributes.image.data[0].attributes.url}`}
+          src={`${process.env.STRAPI_URL || ""}${
+            data.attributes.image.data[0].attributes.url
+          }`}
           alt=""
         />
         <div className="p-8">
